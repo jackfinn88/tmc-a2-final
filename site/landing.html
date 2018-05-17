@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>UniBuddy - Welcome</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			#logo {
+				text-align: center;
+				margin-top: 120px;
+			}
+			body {
+				padding-top: 0px;
+				padding-bottom: 30px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<div id="logo">
+				<h1 style="color:#7a3194">UniBuddy</h1>
+				<br>
+				<img src="images/branding/UoB_Leaf.gif" alt="logo-icon" />
+				<br>
+				<h3 style="color:#77abff">University of Brighton</h3>
+			</div>
+		</div>
+		
+		<p class="team-name">Next Level Solutions<p>
+			
+		<script>
+			window.addEventListener("load", loadHome);
+			
+			function loadHome()
+			{
+				var url = "http://itsuite.it.brighton.ac.uk/jlf40/tmc/a2/home.html";
+				setTimeout(function()
+				{
+					location.replace(url); // used 'replace' instead of assign, as don't want user returning to landing page (possibly with back button on device)
+				}, 2000)
+			}
+		</script>
+	</body>
+</html>

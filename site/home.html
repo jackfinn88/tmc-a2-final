@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>UniBuddy - Home</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			#sign-in {
+				display: none;
+				margin: auto;
+				padding: 1em;
+				display: inline-block;
+			}
+			#confirm-details {
+				display: none;
+				margin: auto;
+				padding: 1em;
+				display: inline-block;
+			}
+			#loading {
+				display: none;
+				text-align: center;
+			}
+			.news-content, .show-less {
+				display: none;
+			}
+			#home-content {
+				margin: auto;
+				padding: 1em;
+			}
+			#news-links {
+				text-align: center;
+				word-wrap: break-word;
+				width: 90%;
+				margin: auto;
+				padding: 1em;
+			}
+			#news-links hr {
+				border-color: #77abff;
+			}
+			#news-links a {
+				text-decoration: none;
+				color: #7a3194;
+			}
+			#news-links a:visited {
+				color: #7a3194;
+			}
+			#news-links a:active {
+				color: #77abff;
+			}
+			#news-links img {
+				max-height:140px;
+				max-width:270px;
+			}
+			.news-header {
+				font-size: 20px;
+				text-align: center;
+				cursor:pointer;
+			}
+			.news-content {
+				font-size: 13px;
+				text-align: left;
+			}
+			.show-less {
+				font-size: 12px;
+				text-align: right;
+				padding-right: 10px;
+				color: #7a3194;
+			}
+			.news-story {
+				background-color: #f2f2f2;
+				padding: 5px;
+			}
+			br {
+				line-height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<div id="top-bar">
+				<div id="top-bar-links">
+					<a href="home.html" class="active" ><img src="images/icons/home-small.png" alt="home-small" />Home</a>
+					<a style="background-color:#7a3194;cursor:default;pointer-events:none;"><!-- used to align buttons --></a>
+					<a style="background-color:#7a3194;cursor:default;pointer-events:none;"><!-- used to align buttons --></a>
+					<a href="javascript:location.reload(true)"><img src="images/icons/reload-small.png" alt="reload-small" />Refresh</a>
+				</div>
+			</div>
+			
+			<div id="home-content">
+				<h2 style="text-align:center">Student News</h2>
+				<h3 style="text-align:center">Tap a Headline to view story.</h3>
+				<hr>
+				<div id="news-links">
+					<div class="news-story">
+						<img src="images/studentlinks/accommodation.jpg" alt="accommodation" onclick="toggleMore(this)" />
+						<br>
+						<a class="news-header" href="#!" onclick="toggleMore(this)">Are you thinking about accommodation?</a>
+						<p class="news-content" onclick="toggleMore(this)" >Housing roadshows
+						<br>
+						<br>
+						At this time of year, many students start to think about where they'll be living for the next academic year. Finding a home will be a new experience for many, and can also be quite daunting.
+						<br>
+						<br>
+						To help you prepare and start planning, we will be visiting all campuses with housing advice between 12.30-2pm on the following dates:
+						<br>
+						<br>
+						Thursday 8 February:
+						<br>
+						<br>
+						Checkland Atrium, Falmer
+						<br>
+						Cockcroft entrance, Moulsecoomb
+						<br>
+						Grand Parade main entrance
+						<br>
+						Friday 9 February:
+						<br>
+						<br>
+						Sprinters Restaurant, Eastbourne
+						Priory Square lobby, Hastings (extended to 12.30-4pm)
+						Don't worry if you can't make it, you can drop in to see us anytime for a chat or contact us by email or telephone. We're here to help you.
+						<br>
+						<br>
+						Find somewhere with studenthomes
+						Our very own housing database, studenthomes, will have our first property listings live from Wednesday 7 February, so make sure you save the date.
+						<br>
+						<br>
+						studenthomes is a private rented sector website, managed by the accommodation service, which landlords use to advertise their properties. It also has interactive maps, housing advice and other useful information. We strongly recommend you use this website first because:
+						<br>
+						<br>
+						No fees are charged (saving 200 quid on average per student)
+						It's a University administered site which is easy to use
+						All paperwork relating to properties has been checked by us
+						There is a code of standards in operation that landlords sign, ensuring you are protected
+						Get in touch
+						If you have any questions, or need some advice, you can contact our offices via:
+						<br>
+						<br>
+						Email: accommodation@brighton.ac.uk
+						<br>
+						<br>
+						Tel:
+						<br>
+						01273 644100 (Brighton)
+						<br>
+						01273 643810 (Eastbourne)
+						<br>
+						01273 644631</p>
+						<p style="text-align:center" class="show-less" onclick="toggleMore(this)">Tap to Collapse</p>
+					</div>
+					<hr>
+					<div class="news-story">
+						<img src="images/studentlinks/wellbeing.jpg" alt="wellbeing" onclick="toggleMore(this)" />
+						<br>
+						<a class="news-header" href="#!" onclick="toggleMore(this)">New wellbeing workshop: A Student's Guide to Managing Worry and Anxiety</a>
+						<p class="news-content" onclick="toggleMore(this)" >We can help you learn how to manage worry and anxiety.
+						<br>
+						<br>
+						We are pleased to confirm that we will be running a free workshop in partnership with the Brighton and Hove Wellbeing Service. The session will teach you more about anxiety and the ways that you can manage it, so you can make the most of your time as a student here.
+						<br>
+						<br>
+						Some feedback from our previous workshop:
+						<br>
+						<br>
+							"Lovely presenters, engaging, made me feel better about coming forward."
+						<br>
+						<br>
+							"Really clear and helpful. There can never be too many workshops like this."
+						<br>
+						<br>
+						Book your place
+						<br>
+						Where: Room E513, Checkland Building, Falmer
+						<br>
+						When: 13 February 2018
+						<br>
+						Time: 5.00 - 6.30pm
+						<br>
+						<br>
+						You will need to book a place in advance.</p>
+						<p style="text-align:center" class="show-less" onclick="toggleMore(this)">Tap to Collapse</p>
+					</div>
+					<hr>
+					<div class="news-story">
+						<img src="images/studentlinks/ramadan.jpg" alt="ramadan" onclick="toggleMore(this)" />
+						<br>
+						<a class="news-header" href="#!" onclick="toggleMore(this)">Will you be observing Ramadan?</a>
+						<p class="news-content" onclick="toggleMore(this)" >Are you concerned about exam dates clashing with Ramadan?
+						<br>
+						<br>
+						If you will be observing Ramadan, or other religious festivals and holy days, which may clash with the scheduled examination period, you can complete a Religious Observance and examinations form, and your School will then do what they can to accommodate your needs and make reasonable adjustments.
+						<br>
+						<br>
+						The Religious Observance and examinations form is available via studentcentral or here. It is also available in hard copy from your School and Students' Union Offices.
+						<br>
+						<br>
+						The deadline for submitting the form for summer examinations is 31 January 2018.
+						<br>
+						<br>
+						Further information about completing the form can be found in the University's 'Religious observance and examination arrangements' Policy. You can also contact the Student Experience and Equalities Manager at equality@brighton.ac.uk if you would like further guidance. Furthermore, the University's Chaplaincy and Students' Union can advise you on how best to manage your religious commitments during examination periods.
+						<br>
+						<br>
+						The following websites provide some useful guidance related to how to manage examinations during Ramadan:
+						<br>
+						<br>
+						http://productivemuslim.com/exams-and-ramadan/
+						<br>
+						<br>
+						https://www.nhs.uk/Livewell/HealthyRamadan/Pages/healthyramadanhome.aspx</p>
+						<p style="text-align:center" class="show-less" onclick="toggleMore(this)">Tap to Collapse</p>
+					</div>
+					<hr>
+					<div class="news-story">
+						<img src="images/studentlinks/teaching-noms.jpg" alt="teaching-noms" onclick="toggleMore(this)" />
+						<br>
+						<a class="news-header" href="#!" onclick="toggleMore(this)">Teaching staff nominations wanted</a>
+						<p class="news-content" onclick="toggleMore(this)" >Do you know someone who is exceptional at teaching or in the facilitation of learning, someone who goes over and above to improve the student experience?
+						<br>
+						<br>
+						You can nominate a University staff member who you think is excellent by completing the form. Closing date for nominations is 14 May 2018.
+						<br>
+						<br>
+						Awards will be presented at the Learning and Teaching conference on 13 July 2018.</p>
+						<p style="text-align:center" class="show-less" onclick="toggleMore(this)">Tap to Collapse</p>
+					</div>
+					<hr>
+					<div class="news-story">
+						<img src="images/studentlinks/travel-smart.jpg" alt="travel-smart" onclick="toggleMore(this)" />
+						<br>
+						<a class="news-header" href="#!" onclick="toggleMore(this)">Travel Smart to campus</a>
+						<p class="news-content" onclick="toggleMore(this)" >Win prizes to celebrate the re-launch of Travel Smart
+						<br>
+						<br>
+						The Travel Smart platform is a great and simple way to find other students or staff to share your car journey into university with, saving you money, reducing pollution and congestion.
+						<br>
+						<br>
+						Register your journey, save money & win prizes!
+						<br>
+						<br>
+						To celebrate the re-launch of the platform, we're giving you the chance to win one of three prizes of 50 quid to put towards car-sharing, and one of 100 bags of Divine chocolate coins - a tasty reminder of how car-sharing can save you money!
+						<br>
+						<br>
+						To be in with a chance of winning, all you need to do is sign up to Travel Smart (if you're not already) and register a journey, in three easy steps:
+						<br>
+						<br>
+						Visit the Travel Smart website here
+						<br>
+						Join the car-sharing community by clicking 'get started', or login if you're already a member
+						<br>
+						Add your regular or one-off journey
+						<br>
+						The first 100 people to add a journey will win a bag of Divine dark chocolate coins. Everyone* who has a journey registered on Travel Smart by 1 March 2018 will be entered into a prize draw to win 50 quid to put towards car-sharing!
+						<br>
+						<br>
+						Please ensure you read the competition terms and conditions here.
+						<br>
+						<br>
+						*This does include those already signed up to Travel Smart.
+						<br>
+						<br>
+						Why use Travel Smart?
+						<br>
+						<br>
+						Using Travel Smart can help reduce your driving costs you can register any journey on the platform that you'd like to share, whether that's to class, between campuses or taking a trip.
+						<br>
+						Once your journey is registered, you will get email updates of potential car-shares
+						<br>
+						You are able to specify if you're a student or member of staff
+						<br>
+						We are part of the East Sussex County Council (ESCC) umbrella scheme, so you can find car-share partners from across ESCC as well as the University of Brighton
+						<br>
+						You can communicate with others and arrange car sharing via the Liftshare App.
+						<br>
+						<br>
+						Questions?
+						<br>
+						<br>
+						If you have any questions about the Travel Smart platform, or the competition, please get in touch with the Environment Team via c-change@brighton.ac.uk
+						</p>
+						<p style="text-align:center" class="show-less" onclick="toggleMore(this)">Tap to Collapse</p>
+					</div>
+					<hr>
+					<div class="news-story">
+						<img src="images/studentlinks/weather-update.jpg" alt="weather-update" onclick="toggleMore(this)" />
+						<br>
+						<a class="news-header" href="#!" onclick="toggleMore(this)">Weather update: Tuesday 27 Feb, 3pm</a>
+						<p class="news-content" onclick="toggleMore(this)" >*Tuesday 27 Feb: Weather update for all students*
+						<br>
+						<br>
+						There has been continuing snowfall across all campuses, but all buildings remain open.
+						<br>
+						<br>
+						Wherever possible, we will continue to ensure that there is no disruption to services provided, but this may change dependent upon the severity of the weather conditions. Please refer to your university email account and the University's weather blog (below) for updates and details of any adjustments to services or building opening hours on your campus.
+						<br>
+						<br>
+						There has been minor disruption to travel routes and public transport, so please do continue to plan your journeys ahead. Check your local transport provider for more information.
+						<br>
+						<br>
+						Brighton campuses
+						<br>
+						The UoB1 bus route is operating between all sites, although at a reduced speed, and Brighton bus services have resumed normal service.
+						<br>
+						<br>
+						Stanford Medical Centre, Brighton
+						<br>
+						Please note that if weather becomes severe, the medical centre may be subject to closure. If this is the case, patients will be contacted by telephone providing their contact details are up to date.
+						<br>
+						<br>
+						Additionally, appointments will be available at 175 Preston Road and we will also be offering telephone appointments.
+						<br>
+						<br>
+						Contact details for the centre can be found here if you have any queries or concerns.</p>
+						<p style="text-align:center" class="show-less" onclick="toggleMore(this)">Tap to Collapse</p>
+					</div>
+				</div>
+				
+				<div style="text-align:center;margin:auto;padding:1em;" >
+					<hr>
+					<br>
+					<button id="clear" type="button">Logout</button>
+				</div>
+			</div>
+			
+			<div id="loading">
+				<h3>Please Wait</h3>
+				<img src="images/icons/spinner.gif" alt="loading-icon" style="height:100px;width:100px" />
+			</div>
+			
+			<div id="sign-in">
+				<form id="sign-in-form" >
+					<fieldset>
+						<legend style="text-align:center">Sign In</legend>
+						<h2 style="text-align: center" >Enter your University login</h2>
+						<label for="user" style="font-weight:bold">Username:</label><br>
+						<input type="text" name="user" id="user" placeholder="e.g. abc123..." required /><br>
+						<label for="pass" style="font-weight:bold">Password:</label><br>
+						<input type="password" name="pass" id="pass" placeholder="Enter your password..." required /><br>					
+						<br>
+						<input type="submit" id="submit" name="submit" value="Sign-In"/>
+					</fieldset>
+				</form>
+			</div>
+			
+			<div id="confirm-details">
+				<form id="confirm-form" >
+					<fieldset>
+						<legend style="text-align:center">Verify details</legend>
+						<h2 style="text-align: center" >Confirm your Name and Campus</h2>
+						<label for="name" style="font-weight:bold">Name:</label><br>
+						<input type="text" name="name" id="name" placeholder="Enter your name..." required /><br>
+						<label for="campus" style="font-weight:bold">Campus:</label><br>
+						<input type="text" name="campus" id="campus" placeholder="Enter your campus..." required /><br>					
+						<br>
+						<input style="padding:5px 15px;background:#77abff;color: white;border:0 none;cursor:pointer;-webkit-border-radius: 25px;border-radius: 25px;" type="submit" id="confirm" name="confirm" value="Confirm"/>
+					</fieldset>
+				</form>
+			</div>
+			
+			<p class="team-name">Next Level Solutions<p>
+			
+			<div id="btm-bar">
+				<div id="btm-bar-links">
+					<a href="timetable.html"><img src="images/icons/calendar-small.png" alt="calendar-small" />Timetable</a>
+					<a href="floors.html"><img src="images/icons/placeholder-small.png" alt="placeholder-small" />Maps</a>
+					<a href="resource.html"><img src="images/icons/book-small.png" alt="book-small" />Resources</a>
+					<a href="rooms.html"><img src="images/icons/monitor-small.png" alt="monitor-small" />Room Info</a>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			window.addEventListener("load", init);
+
+			var input;
+			var request;
+						
+			function init()
+			{
+				document.querySelector("#loading").style.display = "none";
+				document.querySelector("#top-bar-links").style.display = "none";
+				document.querySelector("#btm-bar-links").style.display = "none";
+				document.querySelector("#home-content").style.display = "none";
+				document.querySelector("#sign-in").style.display = "none";
+				document.querySelector("#confirm-details").style.display = "none";
+				document.querySelector("#sign-in-form").addEventListener("submit", signIn);
+				document.querySelector("#confirm-form").addEventListener("submit", confirmDetails);
+				document.querySelector("#clear").addEventListener("click", clearStorage);
+				
+				// check if user is already signed in
+				if("login" in localStorage)
+				{
+					document.querySelector("#home-content").style.display = "block";
+					document.querySelector("#top-bar-links").style.display = "block";
+					document.querySelector("#btm-bar-links").style.display = "block";
+					document.querySelector("#clear").textContent = "Logout " + localStorage.getItem("login");
+				}
+				else
+				{
+					loadSignIn();
+				}
+			}
+			
+			function loadSignIn()
+			{
+				document.querySelector("#loading").style.display = "block";
+				setTimeout(function()
+				{
+					// hide loading-icon / show form
+					document.querySelector("#loading").style.display = "none";
+					document.querySelector("#sign-in").style.display = "block";
+				}, 1500)
+			}
+			
+			function signIn(evt)
+			{
+				evt.preventDefault();
+				var user = document.querySelector("#user").value.trim().toLowerCase();
+				var nameTarget = document.querySelector("#name");
+				// only designed for Hastings
+				document.querySelector("#campus").value = "Hastings";
+				
+				// pre-populate confirmation fields / simulate existing knowledge
+				switch(user)
+				{
+					case "jlf40":
+						nameTarget.value = "Jack";
+						break;
+					case "cm1005":
+						nameTarget.value = "Cameron";
+						break;
+					case "ehs17":
+						nameTarget.value = "Elliot";
+						break;
+					case "bst19":
+						nameTarget.value = "Brad";
+						break;
+					case "hj167":
+						nameTarget.value = "Harry";
+						break;
+					case "rg425":
+						nameTarget.value = "Rupert";
+						break;
+					case "ep395":
+						nameTarget.value = "Edward";
+						break;
+					case "jh1152":
+						nameTarget.value = "Jordan";
+						break;
+					default:
+						nameTarget.value = "Jarod";
+				}
+				
+				document.querySelector("#sign-in").style.display = "none";
+				document.querySelector("#loading").style.display = "block";
+				
+				setTimeout(function()
+				{
+					// hide loading-icon / show page content
+					document.querySelector("#loading").style.display = "none";
+					document.querySelector("#confirm-details").style.display = "block";
+				}, 2000)
+			}
+			
+			function confirmDetails(evt)
+			{
+				evt.preventDefault();
+				var name = document.querySelector("#name").value.trim();
+				// set user's name and campus for future reference
+				localStorage.setItem("name", name);
+				localStorage.setItem("campus", "Hastings");
+				// set user as signed in
+				var user = document.querySelector("#user").value.trim().toLowerCase();
+				localStorage.setItem("login", user);
+				
+				// hide confirmation form / show loading-icon
+				document.querySelector("#confirm-details").style.display = "none";
+				document.querySelector("#loading").style.display = "block";
+				document.querySelector("#clear").textContent = "Logout " + user;
+				
+				setTimeout(function()
+				{
+					// hide loading-icon / show page content
+					document.querySelector("#loading").style.display = "none";
+					document.querySelector("#home-content").style.display = "block";
+					document.querySelector("#top-bar-links").style.display = "block";
+					document.querySelector("#btm-bar-links").style.display = "block";
+				}, 2000)
+			}
+			
+			function clearStorage()
+			{
+				localStorage.removeItem("login");
+				location.reload(true)
+			}
+			
+			// generalised toggle function - only usable by news links
+			function toggleMore(a)
+			{
+				var extra = a.parentNode.children;
+				if(extra[3].style.display === "block" && extra[3].style.display === "block")
+				{
+					extra[3].style.display = "none";
+					extra[4].style.display = "none";
+				}
+				else
+				{
+					extra[3].style.display = "block";
+					extra[4].style.display = "block";
+				}
+			}
+		</script>
+	</body>
+</html>

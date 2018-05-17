@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>UniBuddy - Resources</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="UTF-8">
+		<script src="scripts/resource.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			.result {
+				border-bottom: 1px solid black;
+				padding: 10px 10px 10px 10px;
+				margin-left: 8px;
+				margin-right: 8px;
+			}
+			.not-visible {
+				display: none;
+			}
+			.link {
+				text-align: right;
+				margin: 10px 10px 10px 10px;
+			}
+			.more {
+				background-color: #f2f2f2;
+				padding: 10px 10px 10px 10px;
+				box-shadow: 2px 3px rgba(0,0,0,0.20);
+			}
+			.results-nav {
+				margin-left:auto;
+				padding: 1em;
+			}
+			#input-wrap, #results-wrap {
+				margin: auto;
+				padding: 1em;
+				margin-bottom: 10px;
+			}
+			#input-wrap {
+				text-align: center;
+			}
+			#showing-for {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<div id="top-bar">
+				<a href="home.html"><img src="images/icons/home-small.png" alt="home-small" />Home</a>
+				<a style="background-color:#7a3194;cursor:default;pointer-events:none;"><!-- used to align buttons --></a>
+				<a style="background-color:#7a3194;cursor:default;pointer-events:none;"><!-- used to align buttons --></a>
+				<a href="javascript:location.reload(true)"><img src="images/icons/reload-small.png" alt="reload-small" />Refresh</a>
+			</div>
+			
+			<div id="your-resources" style="text-align: center;margin: auto;padding: 1em;">
+				<h2 style="text-align:center" >Search Resources</h2>
+				<h3 style="text-align:center" >View resources and access your library account</h3>
+				<hr>
+				<form style="padding-top:1em">
+					<fieldset>
+						<legend>Your resources</legend>
+						<h3>Current resources reserved or on loan appear here</h3>
+						<div id="reserved-books">
+							<ul id="show-books" style="text-align: left;" >
+							<!--BOOKS APPEND HERE-->
+							</ul>
+						</div>
+						<hr>
+						<input id="show-reserved" type="button" onclick="toggleReserved()" value="Show" />
+					</fieldset>
+				</form>
+			</div>
+		
+			<div id="input-wrap">
+				<form id="resource-select" method="GET" action="" >
+					<fieldset>
+						<legend>Search for a resource</legend>
+						<h3>Quickly search for books, eBooks and journal articles.</h3>
+						<input type="text" id="resource-search" name="resource-search" placeholder="e.g. Computing..." >
+						<input id="search-button" type="submit" value="Search">
+					</fieldset>
+				</form>
+			</div>
+			
+			<div class="results-nav" style="text-align:center">
+				<form>
+					<fieldset>
+						<legend>Navigate results</legend>
+						<input type="button" class="first" onclick="firstPage()" value="First" />
+						<input type="button" class="previous" onclick="previousPage()" value="<" />
+						<input type="button" class="next" onclick="nextPage()" value=">" />
+						<input type="button" class="last" onclick="lastPage()" value="Last" />
+					</fieldset>
+				</form>
+			</div>
+			
+			<div id="results-wrap">
+				<section id="search-results">
+					<h3 id="showing-for">
+					<!--"Showing results for: '" + input + "'"-->
+					</h3>
+					<div id="result">
+					<!--RESULTS APPEND HERE-->
+					</div>
+				</section>
+			</div>
+			
+			<div class="results-nav" style="text-align:center">
+				<form>
+					<fieldset>
+						<legend>Navigate results</legend>
+						<input type="button" class="first" onclick="firstPage()" value="First" />
+						<input type="button" class="previous" onclick="previousPage()" value="<" />
+						<input type="button" class="next" onclick="nextPage()" value=">" />
+						<input type="button" class="last" onclick="lastPage()" value="Last" />
+					</fieldset>
+				</form>
+			</div>
+			
+			<p class="team-name">Next Level Solutions<p>
+
+			<div id="btm-bar">
+			  <a href="timetable.html"><img src="images/icons/calendar-small.png" alt="calendar-small" />Timetable</a>
+			  <a href="floors.html"><img src="images/icons/placeholder-small.png" alt="placeholder-small" />Maps</a>
+			  <a href="resource.html" class="active"><img src="images/icons/book-small.png" alt="book-small" />Resources</a>
+			  <a href="rooms.html"><img src="images/icons/monitor-small.png" alt="monitor-small" />Room Info</a>
+			</div>
+			
+		</div>
+	</body>
+</html>

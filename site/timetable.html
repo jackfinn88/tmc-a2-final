@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>UniBuddy - Timetable</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			.col1, .col2, .col3, .col4, .col5 {
+				display: none;
+				font-size: 10px;
+				text-align: left;
+			}
+			#calendar {
+				margin: auto;
+				text-align: center;
+				width: 90%;
+				padding-top:1em;
+			}
+			#calendar td {
+				width: 266px;
+				margin: 4px;
+				background-color: #f2f2f2;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+				border: 1px solid #77abff;
+			}
+			#calendar table {
+				border: 2px solid #7a3194;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+				width:284px;
+			}
+			#timetable-nav td {
+				border: 0px;
+				background-color: white;
+				margin: 0px;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div id="wrapper">
+			<div id="top-bar">
+				<a href="home.html"><img src="images/icons/home-small.png" alt="home-small" />Home</a>
+				<a style="background-color:#7a3194;cursor:default;pointer-events:none;"><!-- used to align buttons --></a>
+				<a style="background-color:#7a3194;cursor:default;pointer-events:none;"><!-- used to align buttons --></a>
+				<a href="javascript:location.reload(true)"><img src="images/icons/reload-small.png" alt="reload-small" />Refresh</a>
+			</div>
+			
+			<br style="line-height:100%">
+			<h2 id="welcome" style="text-align:center"></h2>
+			<h3 style="text-align:center">Tap buttons to cycle through days.</h3>
+			<hr style="width:92%">
+			
+			<div id="calendar">
+				<table id="timetable-nav">
+					<tr>
+						<td><button id="previous" type="button">&lt;</button></td>
+						<td><h3 id="showing-day"></h3></td>
+						<td><button id="next" type="button">></button></td>
+					</tr>
+				</table>
+				<br>
+				<table>
+					<!-- 9.00-10.00 -->
+					<tr class="row">
+							<!-- <Column> <Time> <ModuleID> <Title> <Course> <Tutor> <Room> -->
+						<td class="col1">9.00-10.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col2">9.00-10.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col3">9.00-10.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col4">9.00-10.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col5">9.00-10.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+					</tr>
+					<!-- 10.00-11.00 -->
+					<tr class="row">
+						<td class="col1">10.00-11.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col2">10.00-11.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col3">10.00-11.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col4">10.00-11.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col5">10.00-11.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+					</tr>
+					<!-- 11.00-12.00 -->
+					<tr class="row">
+						<td class="col1">11.00-12.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col2">11.00-12.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col3">11.00-12.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col4">11.00-12.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col5">11.00-12.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+					</tr>
+					<!-- 12.00-13.00 -->
+					<tr class="row">
+						<td class="col1">12.00-13.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col2">12.00-13.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col3">12.00-13.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col4">12.00-13.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col5">12.00-13.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+					</tr>
+					<!-- 13.00-14.00 -->
+					<tr class="row">
+						<td class="col1">13.00-14.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col2">13.00-14.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col3">13.00-14.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col4">13.00-14.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col5">13.00-14.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+					</tr>
+					<!-- 14.00-15.00 -->
+					<tr class="row">
+						<td class="col1">14.00-15.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col2">14.00-15.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col3">14.00-15.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col4">14.00-15.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col5">14.00-15.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+					</tr>
+					<!-- 15.00-16.00 -->
+					<tr class="row">
+						<td class="col1">15.00-16.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col2">15.00-16.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col3">15.00-16.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col4">15.00-16.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col5">15.00-16.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+					</tr>
+					<!-- 16.00-17.00 -->
+					<tr class="row">
+						<td class="col1">16.00-17.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col2">16.00-17.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col3">16.00-17.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col4">16.00-17.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+						<td class="col5">16.00-17.00<h3></h3> <p></p> <p></p> <p></p> <p></p> </td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<p class="team-name">Next Level Solutions<p>
+
+			<div id="btm-bar">
+			  <a href="timetable.html" class="active"><img src="images/icons/calendar-small.png" alt="calendar-small" />Timetable</a>
+			  <a href="floors.html"><img src="images/icons/placeholder-small.png" alt="placeholder-small" />Maps</a>
+			  <a href="resource.html"><img src="images/icons/book-small.png" alt="book-small" />Resources</a>
+			  <a href="rooms.html"><img src="images/icons/monitor-small.png" alt="monitor-small" />Room Info</a>
+			</div>
+			
+		</div>
+		
+		<script>
+			window.addEventListener("load", init);
+			
+			var colIndex = 1;
+			
+			function init()
+			{
+				document.querySelector("#next").addEventListener("click", nextDay);
+				document.querySelector("#previous").addEventListener("click", previousDay);
+				
+				createTimetable();
+				checkColumns();
+				var name = localStorage.getItem("name");
+				document.querySelector("#welcome").textContent = "Timetable for " + name;
+			}
+			
+			function nextDay()
+			{
+				var colString = ".col" + colIndex;
+				var col = document.querySelectorAll(colString);
+				col.forEach(hide);
+				colIndex++;
+				checkColumns();
+			}
+			
+			function previousDay()
+			{
+				var colString = ".col" + colIndex;
+				var col = document.querySelectorAll(colString);
+				col.forEach(hide);
+				colIndex--;
+				checkColumns();
+			}
+			
+			function checkColumns()
+			{
+				var colString = ".col" + colIndex;
+				var col = document.querySelectorAll(colString);
+				col.forEach(show);
+				
+				var showingFor;
+				var prevBtn = document.querySelector("#previous");
+				var nextBtn = document.querySelector("#next");
+				
+				switch(colIndex)
+				{
+					case 1:
+						showingFor = "Monday";
+						prevBtn.disabled = true;
+						break;
+					case 2:
+						showingFor = "Tuesday";
+						prevBtn.disabled = false;
+						break;
+					case 3:
+						showingFor = "Wednesday";
+						break;
+					case 4:
+						showingFor = "Thursday";
+						nextBtn.disabled = false;
+						break;
+					case 5:
+						showingFor = "Friday";
+						nextBtn.disabled = true;
+						break;
+					default:
+						showingFor = "";
+				}
+				document.querySelector("#showing-day").textContent = showingFor;
+			}
+			
+			// SIMPLE HIDE/SHOW FUNCTIONS
+			function hide(elem)
+			{
+				elem.style.display = "none";
+			}
+			
+			function show(elem)
+			{
+				elem.style.display = "block";
+			}
+			
+			// DEFINE LESSON KEYS
+			var freeSlot = "free";
+			var lessonWeb = "CI227";
+			var lessonGame = "CI241";
+			var lessonOod = "CI253";
+			var lesson2d = "CI261";
+			var lessonTmc = "CI262";
+			var lesson3d = "CI263";
+			
+			var mon = [];
+			var tues = [];
+			var weds = [];
+			var thurs = [];
+			var fri = [];
+			
+			// CREATE DAILY LESSON PLANS - BY PUSH ORDER
+			mon.push(freeSlot); 	// 9-10
+			mon.push(freeSlot); 	// 10-11
+			mon.push(lessonOod); 	// 11-12
+			mon.push(lessonOod);	// 12-13
+			mon.push(freeSlot);		// 13-14
+			mon.push(lessonWeb);	// 14-15
+			mon.push(lessonWeb);	// 15-16
+			mon.push(freeSlot);		// 16-17
+			
+			tues.push(lesson2d);
+			tues.push(lesson2d);
+			tues.push(freeSlot);
+			tues.push(lesson3d);
+			tues.push(lesson3d);
+			tues.push(freeSlot);
+			tues.push(freeSlot);
+			tues.push(freeSlot);
+			
+			weds.push(freeSlot);
+			weds.push(freeSlot);
+			weds.push(freeSlot);
+			weds.push(freeSlot);
+			weds.push(freeSlot);
+			weds.push(freeSlot);
+			weds.push(freeSlot);
+			weds.push(freeSlot);
+			
+			thurs.push(freeSlot);
+			thurs.push(freeSlot);
+			thurs.push(freeSlot);
+			thurs.push(freeSlot);
+			thurs.push(freeSlot);
+			thurs.push(freeSlot);
+			thurs.push(freeSlot);
+			thurs.push(freeSlot);
+			
+			fri.push(freeSlot);
+			fri.push(freeSlot);
+			fri.push(lessonTmc);
+			fri.push(lessonTmc);
+			fri.push(freeSlot);
+			fri.push(lessonGame);
+			fri.push(lessonGame);
+			fri.push(freeSlot);
+			
+			// CREATE WEEKLY SCHEDULE
+			var week = [];
+			week.push(mon);
+			week.push(tues);
+			week.push(weds);
+			week.push(thurs);
+			week.push(fri);
+
+			// MODULE INFORMATION - SOME WEIRD ARRAY WITH PROPERTIES LIKE AN OBJECT LITERAL AND NO ELEMENTS? OR SOMETHING??
+			var ci253 = {
+				module:"CI253",
+				title:"Object-Oriented Design and Implementation",
+				course:"Digital Games Production",
+				tutor:"Gerard Allsop",
+				room:"512"
+			};
+			
+			var ci262 = {
+				module:"CI262",
+				title:"The Mobile Context",
+				course:"Digital Games Production",
+				tutor:"Jarod Locke",
+				room:"512"
+			};
+			
+			var ci227 = {
+				module:"CI227",
+				title:"Web Technologies",
+				course:"Digital Games Production",
+				tutor:"Marcus Winter",
+				room:"620"
+			};
+			
+			var ci263 = {
+				module:"CI263",
+				title:"3D Compositing",
+				course:"Digital Games Production",
+				tutor:"John Mcclellan",
+				room:"618"
+			};
+			
+			var ci241 = {
+				module:"CI241",
+				title:"Multimedia Game Production",
+				course:"Digital Games Production",
+				tutor:"Richard Leinfellner",
+				room:"620"
+			};
+			
+			var ci261 = {
+				module:"CI261",
+				title:"2D Games Development",
+				course:"Digital Games Production",
+				tutor:"Gerard Allsop",
+				room:"512"
+			};
+			
+			// CREATE COURSE CURRICULUM
+			var moduleList = [];
+			moduleList.push(ci253);
+			moduleList.push(ci262);
+			moduleList.push(ci227);
+			moduleList.push(ci263);
+			moduleList.push(ci241);
+			moduleList.push(ci261);
+			
+			function createTimetable()
+			{
+				// FOR EACH DAY
+				for(var i = 0; i < week.length; i++)
+				{
+					// SET COLUMN IDENTIFIER
+					var dayIndex = i+1;
+					var dayString = ".col" + dayIndex;
+					// IDENTIFY ALL CELLS FOR COLUMN/DAY
+					var day = document.querySelectorAll(dayString);
+					// FOR EACH HOUR
+					for(var j = 0; j < week[i].length; j++)
+					{
+						// FOR EACH MODULE
+						for(var k = 0; k < moduleList.length; k++)
+						{
+							// IF HOUR MARKED FOR MODULE
+							if(week[i][j] == moduleList[k].module)
+							{
+								// IDENTIFY CELL CHILDREN AND POPULATE
+								var hr = day[j].children;
+								hr[0].textContent = "Module: " + moduleList[k].module;
+								hr[1].textContent = "Title: " + moduleList[k].title;
+								hr[2].textContent = "Course: " + moduleList[k].course;
+								hr[3].textContent = "Tutor: " + moduleList[k].tutor;
+								hr[4].textContent = "Room: " + moduleList[k].room;
+								day[j].style.backgroundColor = "#e6ffe0";
+							}
+							else
+							{
+								// CONSIDER AS FREE SLOT - POPULATE WITH?
+							}
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			#qr-image img {
+				max-width: 100%;
+				height: auto;
+				margin:auto;
+			}
+			#button-bar {
+				margin: auto;
+				padding: 1em;
+			}
+			.image-button {
+				width: 25%;
+				float: left;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<div id="top-bar">
+			</div>
+		
+			<div id="qr-image" style="margin-top:30px" >
+				<p style="text-align:center;">Tap button to view the QR code</p>
+				<div id="button-bar"></div>
+				<br><br>
+				<p id="showing" style="text-align:center;"></P>
+				<img id="image-holder" src="images/codes/hah512.png" alt="qr code image" >
+			</div>
+			
+			<p class="team-name">Next Level Solutions<p>
+			
+		<div>
+		<script>
+			window.addEventListener("load", init);
+						
+			function init()
+			{
+				document.querySelector("#image-holder").style.display = "none";
+				
+				createButtons();
+			}
+			
+			function createButtons()
+			{
+				var rooms = ["hah512","hah613","hah615","hah616","hah617","hah618","hah619","hah620"];
+				var target = document.querySelector("#button-bar");
+				console.log(rooms.length);
+				for(i = 0; i < rooms.length; i++)
+				{
+					var b = document.createElement("button");
+					b.setAttribute("class", "image-button");
+					b.setAttribute("name", rooms[i]);
+					b.textContent = rooms[i];
+					b.setAttribute("onclick", "changeImage(this)");
+					target.appendChild(b);
+				}
+			}
+
+			function changeImage(b)
+			{
+				var source = "images/codes/" + b.getAttribute("name") + ".png";
+				var target = document.querySelector("#image-holder");
+				document.querySelector("#showing").textContent = "Showing code for '" + b.getAttribute("name") + "'";
+				target.setAttribute("src", source);
+				document.querySelector("#image-holder").style.display = "block";
+			}
+		</script>
+	</body>
+</html>
